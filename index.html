@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>CRUDS</title>
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h2>crud</h2>
+        <p>Product Management System</p>
+      </div>
+      <div class="inputs">
+        <input type="text" placeholder="title" id="title" />
+        <div class="price">
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="price"
+            id="price" />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="taxes"
+            id="taxes" />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="ads"
+            id="ads" />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="discount"
+            id="discount" />
+          <small id="total"></small>
+        </div>
+        <input type="number" placeholder="count" id="count" />
+        <input type="text" placeholder="category" id="category" />
+        <button id="submit">Create</button>
+      </div>
+      <div class="outputs">
+        <div class="searchBlock">
+          <input
+            onkeyup="searchData(this.value)"
+            type="text"
+            placeholder="search"
+            id="search" />
+          <div class="btnSearch">
+            <button onclick="getSearchMood(id)" id="srarchTitle">
+              Srarch By Title
+            </button>
+            <button onclick="getSearchMood(id)" id="srarchCategory">
+              Srarch By Category
+            </button>
+          </div>
+          <table>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>totla</th>
+              <th>category</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+            <div id="delAll"></div>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <span class="Up">Up</span>
+    <script src="./main.js"></script>
+  </body>
+</html>
